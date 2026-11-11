@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ambition</title>
+  <meta name="theme-color" content="#12141a">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Ambition">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <p id="data"></p>
+      <h1>Ambition</h1>
+    </div>
+    <div id="relogio"></div>
+  </header>
+
+  <section class="card">
+    <h2>Agora</h2>
+    <div id="agora"></div>
+  </section>
+
+  <section class="card">
+    <h2>Dinheiro</h2>
+    <p id="meta-dia" class="nota"></p>
+    <div class="linha">
+      <input id="ganho" type="number" inputmode="decimal" placeholder="Ganho de hoje (R$)">
+      <button id="salvar-ganho">Salvar</button>
+    </div>
+    <div class="barra"><i id="barra-dia"></i></div>
+
+    <p class="nota" style="margin-top:16px">Semana: <span id="total-semana"></span></p>
+    <div class="barra"><i id="barra-semana"></i></div>
+
+    <p class="nota" style="margin-top:16px">Fundo da moto: <span id="total-fundo"></span></p>
+    <div class="linha">
+      <input id="fundo" type="number" inputmode="decimal" placeholder="Quanto já guardei (R$)">
+      <button id="salvar-fundo">Salvar</button>
+    </div>
+    <div class="barra"><i id="barra-fundo"></i></div>
+  </section>
+
+  <section class="card">
+    <h2 id="treino-titulo">Treino</h2>
+    <div id="treino"></div>
+  </section>
+
+  <section class="card">
+    <h2>Rotina de hoje</h2>
+    <ul id="linha-tempo" class="linha-tempo"></ul>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

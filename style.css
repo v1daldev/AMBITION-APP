@@ -1,0 +1,40 @@
+/* Cores num lugar só: para mudar o visual, mexa aqui */
+:root {
+  --bg: #12141a; --card: #1b1f29; --linha: #2a3040;
+  --txt: #ece8df; --suave: #9aa3b5;
+  --verde: #4f9d73; --ouro: #d9a441;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; color: var(--txt);
+  background: radial-gradient(1200px 600px at 20% -10%, #1f2a3a, var(--bg));
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 20px 16px 48px; display: grid; gap: 16px; }
+header { display: flex; justify-content: space-between; align-items: flex-end; }
+header p { margin: 0; color: var(--suave); font-size: 14px; text-transform: capitalize; }
+h1 { margin: 4px 0 0; font-size: 26px; }
+#relogio { font-size: 34px; font-weight: 700; color: var(--ouro); font-variant-numeric: tabular-nums; }
+
+.card { background: var(--card); border: 1px solid var(--linha); border-radius: 16px; padding: 16px; }
+h2 { margin: 0 0 12px; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--suave); }
+.agora-titulo { font-size: 20px; font-weight: 700; }
+.nota, .pequeno { color: var(--suave); font-size: 14px; margin: 4px 0; }
+
+/* Barra de progresso: a largura é alterada pelo JavaScript */
+.barra { height: 10px; border-radius: 99px; background: #0e1016; overflow: hidden; margin: 10px 0 4px; }
+.barra > i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--verde), var(--ouro)); transition: width .6s; }
+
+.linha { display: flex; gap: 8px; align-items: center; }
+input { width: 100%; background: #0e1016; border: 1px solid var(--linha); color: var(--txt); border-radius: 10px; padding: 10px 12px; font-size: 16px; }
+button { background: var(--verde); color: #08120d; border: 0; border-radius: 10px; padding: 10px 16px; font-weight: 700; font-size: 15px; cursor: pointer; }
+button:active { transform: scale(.97); }
+
+.ex { display: grid; grid-template-columns: 1fr 84px; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--linha); }
+.ex small { display: block; color: var(--suave); }
+
+.linha-tempo { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.linha-tempo li { display: flex; gap: 12px; padding: 10px 12px; border-radius: 10px; border-left: 3px solid var(--linha); background: #161922; }
+.linha-tempo .hora { min-width: 96px; color: var(--suave); font-size: 13px; font-variant-numeric: tabular-nums; }
+.linha-tempo .feito { opacity: .4; }
+.linha-tempo .atual { border-left-color: var(--ouro); background: #2a2618; }
